@@ -1,1 +1,1 @@
-## This is a C2-SERVER
+## This is a custom C2-SERVER

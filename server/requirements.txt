@@ -1,0 +1,7 @@
+fastapi                                         
+uvicorn[standard]
+sqlalchemy
+websockets
+pillow
+python-multipart
+python-jose[cryptography]

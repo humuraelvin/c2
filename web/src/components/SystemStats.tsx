@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import Grid from '@mui/material/Grid';
+
 import {
   Paper,
-  Grid,
   Typography,
   Box,
   LinearProgress,
@@ -16,11 +17,11 @@ import {
   Folder as FolderIcon,
   Refresh as RefreshIcon,
 } from '@mui/icons-material';
-import { SystemStats } from '../types';
+import type { SystemStats as SystemStatsType } from '../types';
 import { systemAPI } from '../services/api';
 
 const SystemStats: React.FC = () => {
-  const [stats, setStats] = useState<SystemStats>({
+  const [stats, setStats] = useState<SystemStatsType>({
     total_bots: 0,
     online_bots: 0,
     total_commands: 0,
@@ -95,7 +96,7 @@ const SystemStats: React.FC = () => {
 
       <Grid container spacing={3}>
         {statCards.map((card, index) => (
-          <Grid item xs={12} sm={6} md={3} key={index}>
+          <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
             <Paper
               elevation={0}
               sx={{

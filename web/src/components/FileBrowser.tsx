@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import Grid from '@mui/material/Grid';
+
 import {
-  Grid,
   Card,
   CardMedia,
   CardContent,
@@ -150,7 +151,7 @@ const FileBrowser: React.FC = () => {
     <>
       <Grid container spacing={2} p={2}>
         {files.map((file) => (
-          <Grid item xs={12} sm={6} md={4} lg={3} key={file.id}>
+          <Grid size={{xs:12, sm:6, md:4, lg:3}} key={file.id}>
             <Card
               sx={{
                 height: '100%',
